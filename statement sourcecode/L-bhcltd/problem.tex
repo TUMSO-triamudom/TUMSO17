@@ -1,0 +1,63 @@
+\documentclass[11pt,a4paper]{article}
+
+\newcommand{\tumsoTime}{13:00 น. - 16:00 น.}
+\newcommand{\tumsoRound}{2}
+
+\usepackage{../tumso}
+
+\begin{document}
+
+\begin{problem}{บล็อกตัดหนักเบา}{standard input}{standard output}{2 seconds}{256 megabytes}{500}
+
+Jittat อยู่ในประเทศ kalaland, ในประเทศนี้มีเมืองทั้งหมด $N$ เมือง และมีถนนอยู่ทั้งหมด $M$ สาย โดยที่เมือง $u_i$ จะเชื่อมเมือง $v_i$ ทุกเมืองสามารถไปมาหาสู่กันได้, แต่ละเมืองมีร้านขายพิซซ่าชิ้นละ $w_i$ บาท
+
+Jittat ได้รับ $Q$ queries
+\begin{itemize}
+\item \texttt{1 u w} ร้านขายพิซซ่าที่เมือง $u$ ราคาพิซซ่าเปลี่ยนเป็น $w$
+
+\item \texttt{2 u v} Jittat ต้องการหาเส้นทางเดินจากเมือง $u$ ไปเมือง $v$ โดยไม่เดินผ่านเมืองใดซ้ำ จงหาว่าถ้า Jittat เลือกซื้อพิซซ่า 1 ชิ้น จะซื้อพิซซ่าราคาถูกสุดได้เท่าใด
+\end{itemize}
+
+\InputFile
+ข้อมูลนำเข้ามีทั้งหมด $M+Q+2$ บรรทัด
+
+บรรทัดแรก จำนวนเต็ม $N,M,Q$ $(1 \le N, Q \le 10^5, 1 \le M \le 2\cdot10^5)$
+
+บรรทัดที่สอง จำนวนเต็ม $N$ ตัว ระบุ $w_i$ $(1 \le w_i \le 10^9)$
+
+อีก $M$ บรรทัด จำนวนเต็ม $u_i, v_i$ $(1 \le u_i, v_i \le N, u_i \neq v_i)$
+
+อีก $Q$ บรรทัด ระบุ query ตามข้างต้น $(1 \le u, v \le N, 1 \le w \le 10^9)$
+
+\OutputFile
+สำหรับทุกๆ query type 2 แสดงผล พิซซ่าที่ราคาถูกสุด
+
+\Scoring
+ชุดทดสอบจะถูกแบ่งเป็น 7 ชุด จะได้คะแนนในแต่ละชุดก็ต่อเมื่อโปรแกรมให้ผลลัพธ์ถูกต้องในชุดทดสอบย่อยทั้งหมด
+
+\begin{description}
+\item[ชุดที่ 1 (23 คะแนน)] จะมี $1 \leq N, Q \leq 10^2, M = N-1$
+
+\item[ชุดที่ 2 (52 คะแนน)] จะมี $1 \leq N, Q \leq 10^5, M = N-1,$ ไม่มี query type 1
+
+\item[ชุดที่ 3 (63 คะแนน)] จะมี $1 \leq N, Q \leq 10^5, M = N-1$
+
+\item[ชุดที่ 4 (20 คะแนน)] จะมี $1 \leq N, Q \leq 10^2,$ ไม่มี query type 1
+
+\item[ชุดที่ 5 (36 คะแนน)] จะมี $1 \leq N, Q \leq 10^2$
+
+\item[ชุดที่ 6 (149 คะแนน)] จะมี $1 \leq N, Q \leq 10^5,$ ไม่มี query type 1
+
+\item[ชุดที่ 7 (157 คะแนน)] ไม่มีเงื่อนไขเพิ่มเติมจากโจทย์
+\end{description}
+
+\Examples
+
+\begin{example}
+\exmpfile{example.01}{example.01.a}%
+\exmpfile{example.02}{example.02.a}%
+\end{example}
+
+\end{problem}
+
+\end{document}

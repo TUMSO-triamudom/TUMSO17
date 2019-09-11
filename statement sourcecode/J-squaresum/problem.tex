@@ -1,0 +1,61 @@
+\documentclass[11pt,a4paper]{article}
+
+\newcommand{\tumsoTime}{13:00 น. - 16:00 น.}
+\newcommand{\tumsoRound}{2}
+
+\usepackage{../tumso}
+
+\begin{document}
+
+\begin{problem}{ผลบวกกำลังสองสมบูรณ์}{standard input}{standard output}{3 seconds}{256 megabytes}{240}
+
+ให้เลขมา $N$ ตัว $(A_1, A_2, \dots, A_N)$ 
+
+มี $M$ operation
+\begin{itemize}
+
+\item \texttt{1 L R C} หมายถึง $A_L, A_{L+1},...,A_R$ บวกด้วย $C$
+
+\item \texttt{2 L R} ให้แสดงผลค่า $\displaystyle\sum_{i=L}^{R} (A_i)^2 \mod 10^9+7$
+
+\end{itemize}
+
+\InputFile
+ข้อมูลนำเข้ามีทั้งหมด $M+2$ บรรทัด
+
+บรรทัดแรก จำนวนเต็ม $N$ และ $M$ $(2 \le N, M \le 5 \cdot 10^4)$
+
+บรรทัดที่สอง จำนวนเต็ม $N$ ตัว ระบุ $A_i$ $(0 \le A_i \le 10^9)$ 
+
+อีก $M$ บรรทัด ระบุ operation ตามข้างต้น $(1 \le L, R \le N, L \le R,
+1 \le C \le 10^4)$
+
+\OutputFile
+สำหรับ operation ที่ 2 แสดงผล ตามข้างต้น
+
+\Scoring
+ชุดทดสอบจะถูกแบ่งเป็น 4 ชุด จะได้คะแนนในแต่ละชุดก็ต่อเมื่อโปรแกรมให้ผลลัพธ์ถูกต้องในชุดทดสอบย่อยทั้งหมด
+
+\begin{description}
+
+\item[ชุดที่ 1  (24 คะแนน)] จะมี $1 \leq N, M \leq 10^3,0 \leq A_i \leq 10^6, 1 \leq C \leq 20$
+
+\item[ชุดที่ 2 (40 คะแนน)] จะมี $0 \leq A_i \leq 10^6, 1 \leq C \leq 20,$ ไม่มี query type 1
+
+\item[ชุดที่ 3 (98 คะแนน)] จะมี $0 \leq A_i \leq 10^6, 1 \leq C \leq 20$
+
+\item[ชุดที่ 4 (78 คะแนน)] ไม่มีเงื่อนไขเพิ่มเติมจากโจทย์
+
+\end{description}
+
+\Examples
+
+\begin{example}
+\exmpfile{example.01}{example.01.a}%
+\exmpfile{example.02}{example.02.a}%
+\exmpfile{example.03}{example.03.a}%
+\end{example}
+
+\end{problem}
+
+\end{document}

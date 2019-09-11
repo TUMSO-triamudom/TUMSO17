@@ -1,0 +1,41 @@
+\documentclass[11pt,a4paper]{article}
+
+\newcommand{\tumsoTime}{09:00 น. - 12:00 น.}
+\newcommand{\tumsoRound}{1}
+
+\usepackage{../tumso}
+
+\begin{document}
+
+\begin{problem}{Rectangle Sum}{standard input}{standard output}{1 second}{256 megabytes}{100}
+
+จงหาจำนวนสี่เหลี่ยมผืนผ้าที่ครอบคลุมพื้นที่ในตารางที่มีผลรวมของแต่ละช่องในพื้นที่ที่ครอบคลุมน้อยกว่าหรือเท่ากับ $k$
+
+\InputFile
+บรรทัดแรกมีจำนวนเต็มสามจำนวน $n, m, k$ $(1 \leq n \leq 300, 1 \leq m \leq 300, 1 \leq k \leq 10^9)$ หมายถึงความสูงของตาราง ความกว้างของตารางและผลรวมสี่เหลี่ยมมากที่สุดที่เป็นไปได้
+
+อีก $n$ บรรทัดประกอบด้วยจำนวนเต็ม $m$ จำนวน
+
+จำนวนเต็มในบรรทัดที่ $i+1$ $(1 \leq i \leq n)$ ในตำแน่งที่ $j$ $(1 \leq j \leq m)$ คือ $a_{ij}$ โดยที่ $1 \leq a_{ij} \leq 10^9$
+
+\OutputFile
+ระบุจำนวนเต็มหนึ่งตัวคือจำนวนสี่เหลี่ยมผืนผ้าที่เป็นไปได้
+
+\Scoring
+ชุดทดสอบจะถูกแบ่งเป็น 2 ชุด จะได้คะแนนในแต่ละชุดก็ต่อเมื่อโปรแกรมให้ผลลัพธ์ถูกต้องในชุดทดสอบย่อยทั้งหมด
+\begin{description}
+\item[ชุดที่ 1 (29 คะแนน)] จะมี $1 \leq n, m \leq 100$
+
+\item[ชุดที่ 2 (71 คะแนน)] ไม่มีเงื่อนไขเพิ่มเติมจากโจทย์
+\end{description}
+
+\Examples
+
+\begin{example}
+\exmpfile{example.01}{example.01.a}%
+\exmpfile{example.02}{example.02.a}%
+\end{example}
+
+\end{problem}
+
+\end{document}

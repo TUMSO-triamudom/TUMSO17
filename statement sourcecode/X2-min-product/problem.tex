@@ -1,0 +1,39 @@
+\documentclass[11pt,a4paper]{article}
+
+\newcommand{\tumsoTime}{13:00 น. - 16:00 น.}
+\newcommand{\tumsoRound}{2}
+
+\usepackage{../tumso}
+
+\begin{document}
+
+\begin{problem}{Minimum Product}{standard input}{standard output}{1 second}{256 megabytes}{0}
+
+กำหนดอาร์เรย์ของคู่อันดับ $(x_i, y_i)$ ยาว $n$ เราต้องการจะเลือก subsequence $S$ โดยที่ $S$ ต้องมีความยาวเท่ากับ $K$ และสำหรับทุกๆ index $i, j \in S$ ถ้า $i < j$ แล้ว $x_i \leq x_j \land y_i \leq y_j$ เราต้องการค่าน้อยที่สุดที่เป็นไปได้ของ $$\bigg(\sum_{i \in S} x_i\bigg)\bigg(\sum_{i \in S} y_i\bigg)$$
+
+\InputFile
+บรรทัดแรกจะมีจำนวนเต็มสองตัวคือ $n$ และ $k$ $(1 \leq k \leq n \leq 100)$ ขั้นด้วยช่องว่าง หมายถึงความยาวของอารเรย์คู่อันดับและความยาว subsequence ที่ต้องการ
+
+ในบรรทัดที่ $i+1$ $(1 \leq i \leq n)$ มีจำนวนเต็มสองตัวขั้นด้วยช่องว่างคือ $x_i$ และ $y_i$ $(1 \leq x_i,y_i \leq 300)$
+
+
+\OutputFile
+ให้ระบุจำนวนเต็มหนึ่งตัวคือค่าน้อยที่สุดที่เป็นไปได้ของผลคูณระหว่างผลรวมของ $x$ และผลรวมของ $y$
+
+\Scoring
+ชุดทดสอบจะถูกแบ่งเป็น 2 ชุด จะได้คะแนนในแต่ละชุดก็ต่อเมื่อโปรแกรมให้ผลลัพธ์ถูกต้องในชุดทดสอบย่อยทั้งหมด
+\begin{description}
+\item[ชุดที่ 1 (0 คะแนน)] จะมี $1 \leq k \leq n \leq 20$
+
+\item[ชุดที่ 2 (0 คะแนน)] ไม่มีเงื่อนไขเพิ่มเติมจากโจทย์
+\end{description}
+
+\Example
+
+\begin{example}
+\exmpfile{example.01}{example.01.a}%
+\end{example}
+
+\end{problem}
+
+\end{document}
